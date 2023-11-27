@@ -27,14 +27,6 @@ return {
           require("luasnip/loaders/from_vscode").lazy_load()
         end,
       },
-
-      -- ai based completion
-      {
-        "jcdickinson/codeium.nvim",
-        config = function()
-          require("codeium").setup {}
-        end,
-      },
     },
   },
 
@@ -72,7 +64,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
-
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "syntax")
       require("nvim-treesitter.configs").setup(opts)

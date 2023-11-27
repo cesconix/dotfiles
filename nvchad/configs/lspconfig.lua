@@ -3,8 +3,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
-
-local servers = { "html", "cssls", "jsonls", "bashls", "tsserver", "tailwindcss", "prismals", "graphql", "eslint" }
+local servers = { "html", "cssls", "jsonls", "bashls", "tsserver", "tailwindcss", "prismals", "graphql" }
 
 local custom_on_attach = function(client, bufnr)
   on_attach(client, bufnr)

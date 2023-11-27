@@ -13,7 +13,7 @@ M.ui = {
     overriden_modules = nil,
   },
   tabufline = {
-    lazyload = false
+    lazyload = false,
   },
   -- transparency = true,
 }
