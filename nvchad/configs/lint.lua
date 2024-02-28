@@ -1,8 +1,8 @@
 require("lint").linters_by_ft = {
-  javascript = { "eslint" },
-  typescript = { "eslint" },
-  javascriptreact = { "eslint" },
-  typescriptreact = { "eslint" },
+  javascript = { "biomejs" },
+  typescript = { "biomejs" },
+  javascriptreact = { "biomejs" },
+  typescriptreact = { "biomejs" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
