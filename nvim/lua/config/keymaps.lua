@@ -35,7 +35,7 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save Fil
 vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select All' })
 
 -- File Explorer (toggle)
-vim.keymap.set('n', '<leader>e', '<cmd>Neotree<cr>', opts)
+vim.keymap.set('n', 'N', '<cmd>Neotree toggle<cr>', opts)
 
 -- Lazy & Mason
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
@@ -53,3 +53,7 @@ vim.keymap.set('n', '<leader>R', '<cmd>set rnu!<cr>', { desc = 'Relative Number'
 
 -- Quit
 vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Quit' })
+
+-- Move Cursor
+vim.keymap.set('n', 'L', '$', { desc = 'Go to end of line' })
+vim.keymap.set('n', 'H', '^', { desc = 'Go to start of line' })
