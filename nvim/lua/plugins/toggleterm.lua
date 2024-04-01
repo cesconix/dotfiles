@@ -1,7 +1,7 @@
-vim.keymap.set('n', '<leader>t0', ':ToggleTermToggleAll<CR>')
-vim.keymap.set('n', '<leader>t1', ':1ToggleTerm<CR>')
-vim.keymap.set('n', '<leader>t2', ':2ToggleTerm<CR>')
-vim.keymap.set('n', '<leader>t3', ':ToggleTerm direction=float<CR>')
+-- vim.keymap.set({ 'n', 't' }, '<C-\\>', '<cmd>ToggleTermToggleAll<CR>')
+vim.keymap.set({ 'n', 't' }, '<C-,>', '<cmd>1ToggleTerm direction=horizontal<CR>')
+vim.keymap.set({ 'n', 't' }, '<C-.>', '<cmd>2ToggleTerm direction=horizontal<CR>')
+vim.keymap.set({ 'n', 't' }, '<C-space>', '<cmd>ToggleTerm direction=float<CR>')
 
 return {
   'akinsho/toggleterm.nvim',
