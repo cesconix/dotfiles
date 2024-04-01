@@ -28,9 +28,11 @@ vim.keymap.set('t', '<C-j>', '<cmd>wincmd j<cr>', opts)
 vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<cr>', opts)
 vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<cr>', opts)
 
--- Save File
+-- Quit and Save
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
-
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', '<cmd>qa!<cr><esc>', { desc = 'Quit discarding changes' })
+vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Quit' })
 -- Select All
 vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select All' })
 
@@ -50,9 +52,6 @@ vim.keymap.set('v', 'K', "<cmd>m '<1<CR>gv=gv", { desc = 'Move Up' })
 
 -- Relative Numbers
 vim.keymap.set('n', '<leader>R', '<cmd>set rnu!<cr>', { desc = 'Relative Number' })
-
--- Quit
-vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Quit' })
 
 -- Move Cursor
 vim.keymap.set('n', 'L', '$', { desc = 'Go to end of line' })
