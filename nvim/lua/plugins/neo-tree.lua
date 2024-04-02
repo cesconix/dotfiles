@@ -8,6 +8,11 @@ return {
   },
   config = function()
     require('neo-tree').setup {
+      default_component_configs = {
+        indent = {
+          highlight = 'IblIndent',
+        },
+      },
       window = {
         width = 30,
         mapping_options = {
