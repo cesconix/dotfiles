@@ -11,6 +11,10 @@ size = 14.0
 family = "BlexMono Nerd Font"
 style = "Regular"
 
+[font.italic]
+family = "BlexMono Nerd Font"
+style = "Regular"
+
 [window]
 dynamic_title = true
 option_as_alt = "OnlyLeft"
