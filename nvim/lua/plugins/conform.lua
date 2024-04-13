@@ -13,10 +13,10 @@ return {
       html = { 'prettier' },
       yaml = { 'prettier' },
       json = { 'biome', 'prettier' },
-      javascript = { 'biome', 'prettier' },
-      typescript = { 'biome', 'prettier' },
-      javascriptreact = { 'biome', 'prettier' },
-      typescriptreact = { 'biome', 'prettier' },
+      javascript = { 'biome', 'biome-check', 'prettier' },
+      typescript = { 'biome', 'biome-check', 'prettier' },
+      javascriptreact = { 'biome', 'biome-check', 'prettier' },
+      typescriptreact = { 'biome', 'biome-check', 'prettier' },
     }
 
     local formatters = {
