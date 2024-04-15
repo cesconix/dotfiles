@@ -73,6 +73,7 @@ return {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search: Resume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search: Recent Files' })
       vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search: Buffers' })
+      vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Search: Git Status' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>s/', function()
