@@ -9,14 +9,15 @@ return {
     local formatters_by_ft = {
       lua = { 'stylua' },
       markdown = { 'mdformat' },
-      css = { 'prettier' },
-      html = { 'prettier' },
-      yaml = { 'prettier' },
-      json = { 'biome', 'prettier' },
-      javascript = { 'biome', 'biome-check', 'prettier' },
-      typescript = { 'biome', 'biome-check', 'prettier' },
-      javascriptreact = { 'biome', 'biome-check', 'prettier' },
-      typescriptreact = { 'biome', 'biome-check', 'prettier' },
+      css = { 'prettierd' },
+      html = { 'prettierd' },
+      yaml = { 'prettierd' },
+      graphql = { 'prettierd' },
+      json = { 'biome', 'prettierd' },
+      javascript = { 'biome', 'biome-check', 'prettierd' },
+      typescript = { 'biome', 'biome-check', 'prettierd' },
+      javascriptreact = { 'biome', 'biome-check', 'prettierd' },
+      typescriptreact = { 'biome', 'biome-check', 'prettierd' },
     }
 
     local formatters = {
@@ -27,10 +28,12 @@ return {
           }
         end,
       },
-      prettier = {
+      prettierd = {
         condition = function()
           return utils.file_exists {
+            '.prettierrc',
             '.prettierrc.js',
+            'prettier.config.cjs',
           }
         end,
       },
