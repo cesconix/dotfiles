@@ -34,10 +34,10 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', '<cmd>qa!<cr><esc>', { desc = 'Quit discarding changes' })
 vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Quit' })
 -- Select All
-vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select All' })
+vim.keymap.set('n', '<M-a>', 'ggVG', { desc = 'Select All' })
 
 -- File Explorer (toggle)
-vim.keymap.set('n', 'N', '<cmd>Neotree toggle<cr>', opts)
+vim.keymap.set('n', '<C-b>', '<cmd>Neotree toggle<cr>', opts)
 
 -- Lazy & Mason
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
