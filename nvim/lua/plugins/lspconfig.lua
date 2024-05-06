@@ -14,6 +14,15 @@ return {
       -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
       { 'folke/neodev.nvim', opts = {} },
+      {
+        'ray-x/lsp_signature.nvim',
+        opts = {
+          bind = true,
+          handler_opts = {
+            border = 'none',
+          },
+        },
+      },
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -179,6 +188,10 @@ return {
           end,
         },
       }
+
+      -- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+      --   border = 'rounded',
+      -- })
     end,
   },
 }

@@ -16,12 +16,22 @@ yabai -m config mouse_action2 resize
 
 yabai -m config mouse_drop_action swap
 
-yabai -m rule --add app="^System Settings" manage=off
-yabai -m rule --add app="^Calculator" manage=off
-yabai -m rule --add app="^Calendar" manage=off
-yabai -m rule --add app="^Microsoft Teams$" manage=off
-yabai -m rule --add app="^OrbStack" manage=off
-yabai -m rule --add app="^TeamViewer" manage=off
-yabai -m rule --add app="^Finder" manage=off
-yabai -m rule --add app="^1Password" manage=off
+ignored_apps=(
+  "1Password"
+  "System Settings"
+  "Calculator"
+  "Calendar"
+  "Microsoft Teams"
+  "OrbStack"
+  "TeamViewer"
+  "Finder"
+  "Telegram"
+  "System Information"
+  "System Preferences"
+  "Zoom"
+)
+
+for app in "${ignored_apps[@]}";
+do yabai -m rule --add app="${app}" manage=off;
+done;
 

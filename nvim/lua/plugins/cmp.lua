@@ -23,6 +23,7 @@ return {
             'rafamadriz/friendly-snippets',
             config = function()
               require('luasnip.loaders.from_vscode').lazy_load()
+              require('luasnip').filetype_extend('typescript', { 'javascript' })
             end,
           },
         },
@@ -100,6 +101,10 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
         },
+        -- window = {
+        --   completion = cmp.config.window.bordered(),
+        --   documentation = cmp.config.window.bordered(),
+        -- },
       }
     end,
   },

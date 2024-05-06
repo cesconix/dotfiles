@@ -8,7 +8,7 @@ return {
 
     local formatters_by_ft = {
       lua = { 'stylua' },
-      markdown = { 'mdformat' },
+      -- markdown = { 'mdformat' },
       css = { 'prettierd' },
       html = { 'prettierd' },
       yaml = { 'prettierd' },

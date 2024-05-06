@@ -14,11 +14,6 @@ return {
         },
       },
       window = {
-        width = 30,
-        mapping_options = {
-          noremap = true,
-          nowait = true,
-        },
         mappings = {
           ['P'] = { 'toggle_preview', config = { use_float = false, use_image_nvim = true } },
           ['oc'] = 'noop',
@@ -34,6 +29,7 @@ return {
       filesystem = {
         filtered_items = {
           visible = true,
+          hide_dotfiles = false,
         },
         follow_current_file = {
           enabled = true,

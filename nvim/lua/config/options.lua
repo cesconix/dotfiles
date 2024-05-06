@@ -1,6 +1,8 @@
 -- Globals
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Options
 vim.opt.number = true
@@ -21,7 +23,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
-vim.opt.scrolloff = 10
+-- vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 99
