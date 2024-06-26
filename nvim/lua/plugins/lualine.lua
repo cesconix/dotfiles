@@ -16,6 +16,7 @@ return {
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },
+      extensions = { 'neo-tree', 'fugitive', 'mason', 'quickfix', 'toggleterm', 'trouble' },
     }
   end,
 }

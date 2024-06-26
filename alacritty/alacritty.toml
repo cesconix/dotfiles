@@ -18,6 +18,8 @@ style = "Regular"
 [window]
 dynamic_title = true
 option_as_alt = "OnlyLeft"
+decorations = "Buttonless"
+decorations_theme_variant = "Dark"
 
 [window.padding]
 x = 0

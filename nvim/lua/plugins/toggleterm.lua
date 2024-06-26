@@ -1,12 +1,22 @@
-vim.keymap.set({ 'n', 't' }, '<M-h>', '<cmd>1ToggleTerm direction=horizontal<CR>')
-vim.keymap.set({ 'n', 't' }, '<M-l>', '<cmd>2ToggleTerm direction=horizontal<CR>')
-vim.keymap.set({ 'n', 't' }, '<M-\\>', '<cmd>ToggleTerm direction=float<CR>')
+vim.keymap.set({ 'n', 't' }, '<M-h>', '<cmd>1ToggleTerm direction=horizontal name=h<CR>')
+vim.keymap.set({ 'n', 't' }, '<M-j>', '<cmd>1ToggleTerm direction=vertical name=j<CR>')
+vim.keymap.set({ 'n', 't' }, '<M-k>', '<cmd>2ToggleTerm direction=vertical name=k<CR>')
+vim.keymap.set({ 'n', 't' }, '<M-l>', '<cmd>2ToggleTerm direction=horizontal name=l<CR>')
+vim.keymap.set({ 'n', 't' }, '<M-\\>', '<cmd>3ToggleTerm direction=float name=\\<CR>')
 
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
   config = function()
-    require('toggleterm').setup()
+    require('toggleterm').setup {
+      size = function(term)
+        if term.direction == 'horizontal' then
+          return 15
+        elseif term.direction == 'vertical' then
+          return vim.o.columns * 0.4
+        end
+      end,
+    }
 
     function _G.set_terminal_keymaps()
       local opts = { buffer = 0 }
