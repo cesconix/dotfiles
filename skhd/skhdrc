@@ -1,7 +1,5 @@
-# open terminal
+# open apps
 cmd - return : open -n -a "Alacritty"
-
-# open chrome 
 cmd + shift - return : open -n -a "Arc"
 
 # toggle window split type
@@ -37,3 +35,6 @@ shift + alt - l : yabai -m window --resize right:20:0
 # move window to another display
 ctrl + alt - 1 : yabai -m window --display 1 && yabai -m display --focus 1
 ctrl + alt - 2 : yabai -m window --display 2 && yabai -m display --focus 2
+
+# toggle window fullscreen
+cmd + shift - f : yabai -m window --toggle zoom-fullscreen

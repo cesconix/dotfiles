@@ -10,10 +10,10 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
 -- Resize window
-vim.keymap.set('n', '<S-Up>', '<cmd>resize +1<cr>', opts)
-vim.keymap.set('n', '<S-Down>', '<cmd>resize -1<cr>', opts)
-vim.keymap.set('n', '<S-Left>', '<cmd>vertical resize +1<cr>', opts)
-vim.keymap.set('n', '<S-Right>', '<cmd>vertical resize -1<cr>', opts)
+vim.keymap.set('n', '<S-Up>', '<cmd>resize +2<cr>', opts)
+vim.keymap.set('n', '<S-Down>', '<cmd>resize -2<cr>', opts)
+vim.keymap.set('n', '<S-Left>', '<cmd>vertical resize +2<cr>', opts)
+vim.keymap.set('n', '<S-Right>', '<cmd>vertical resize -2<cr>', opts)
 
 -- Exit terminal mode
 vim.keymap.set('t', '<esc><esc>', '<C-\\><C-n>', opts)
@@ -29,11 +29,8 @@ vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<cr>', opts)
 vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<cr>', opts)
 
 -- Quit and Save
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit' })
--- vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', '<cmd>w<cr><cmd>bd<cr>', { desc = 'Save and Quit' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', '<cmd>qa!<cr><esc>', { desc = 'Quit discarding changes' })
-vim.keymap.set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Quit' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit (buffer)' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', '<cmd>qa<cr><esc>', { desc = 'Quit' })
 
 -- Select All
 vim.keymap.set('n', '<M-a>', 'ggVG', { desc = 'Select All' })

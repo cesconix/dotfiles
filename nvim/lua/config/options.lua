@@ -27,6 +27,7 @@ vim.opt.cursorline = true
 vim.opt.hlsearch = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 99
+vim.opt.swapfile = false
 -- vim.opt.tabstop = 2
 -- vim.opt.shiftwidth = 2
 -- vim.opt.expandtab = true
