@@ -21,22 +21,22 @@ return {
     }
 
     local formatters = {
-      biome = {
-        condition = function()
-          return utils.file_exists {
-            'biome.json',
-          }
-        end,
-      },
-      prettierd = {
-        condition = function()
-          return utils.file_exists {
-            '.prettierrc',
-            '.prettierrc.js',
-            'prettier.config.cjs',
-          }
-        end,
-      },
+      -- biome = {
+      --   condition = function()
+      --     return utils.file_exists {
+      --       'biome.json',
+      --     }
+      --   end,
+      -- },
+      g, -- prettierd = {
+      --   condition = function()
+      --     return utils.file_exists {
+      --       '.prettierrc',
+      --       '.prettierrc.js',
+      --       'prettier.config.cjs',
+      --     }
+      --   end,
+      -- },
     }
 
     conform.setup {
