@@ -8,7 +8,7 @@ return {
 
     local formatters_by_ft = {
       lua = { 'stylua' },
-      -- markdown = { 'mdformat' },
+      markdown = { 'prettierd' },
       css = { 'prettierd' },
       html = { 'prettierd' },
       yaml = { 'prettierd' },
@@ -21,22 +21,22 @@ return {
     }
 
     local formatters = {
-      -- biome = {
-      --   condition = function()
-      --     return utils.file_exists {
-      --       'biome.json',
-      --     }
-      --   end,
-      -- },
-      g, -- prettierd = {
-      --   condition = function()
-      --     return utils.file_exists {
-      --       '.prettierrc',
-      --       '.prettierrc.js',
-      --       'prettier.config.cjs',
-      --     }
-      --   end,
-      -- },
+      biome = {
+        condition = function()
+          return utils.file_exists {
+            'biome.json',
+          }
+        end,
+      },
+      prettierd = {
+        condition = function()
+          return utils.file_exists {
+            '.prettierrc',
+            '.prettierrc.js',
+            'prettier.config.cjs',
+          }
+        end,
+      },
     }
 
     conform.setup {
