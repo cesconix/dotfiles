@@ -7,7 +7,7 @@ return {
     local lint = require 'lint'
 
     local linters_by_ft = {
-      markdown = { 'markdownlint' },
+      -- markdown = { 'markdownlint' },
       dockerfile = { 'hadolint' },
       json = { 'biomejs', 'jsonlint' },
       javascript = { 'biomejs', 'eslint' },

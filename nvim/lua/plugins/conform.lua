@@ -14,6 +14,7 @@ return {
       yaml = { 'prettierd' },
       graphql = { 'prettierd' },
       json = { 'biome', 'prettierd' },
+      astro = { 'biome', 'biome-check', 'prettierd' },
       javascript = { 'biome', 'biome-check', 'prettierd' },
       typescript = { 'biome', 'biome-check', 'prettierd' },
       javascriptreact = { 'biome', 'biome-check', 'prettierd' },
