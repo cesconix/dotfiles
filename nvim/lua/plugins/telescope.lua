@@ -20,6 +20,7 @@ return {
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
+      { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -63,13 +64,20 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'live_grep_args')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search: Help' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search: Keymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search: Files' })
-      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search: Grep (workspace)' })
+      -- vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search: Grep (workspace)' })
+      vim.keymap.set(
+        'n',
+        '<leader>sg',
+        require('telescope').extensions.live_grep_args.live_grep_args,
+        { desc = 'Search: Grep (workspace)' }
+      )
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search: Resume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search: Recent Files' })
       vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search: Buffers' })

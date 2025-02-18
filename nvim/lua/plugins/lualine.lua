@@ -1,22 +1,30 @@
+-- https://github.com/nvim-lualine/lualine.nvim
 return {
   'nvim-lualine/lualine.nvim',
-  event = { 'VimEnter', 'BufReadPost', 'BufNewFile' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
-  config = function()
-    require('lualine').setup {
-      options = {
-        section_separators = '',
-        component_separators = '',
+  opts = {
+    options = {
+      theme = 'auto',
+      -- section_separators = '',
+      component_separators = '',
+      section_separators = { left = '', right = '' },
+    },
+    sections = {
+      lualine_a = {
+        {
+          'mode',
+          separator = { left = '' },
+          padding = { left = 0, right = 1 },
+        },
       },
-      sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff' },
-        lualine_c = { 'diagnostics', { 'filename', path = 1 } },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' },
+      lualine_b = { 'branch', { 'diff', padding = 0 } },
+      lualine_c = { 'diagnostics', { 'filename', path = 1 } },
+      lualine_x = { 'encoding', 'fileformat', 'filetype' },
+      lualine_y = { { 'progress', padding = { left = 0, right = 1 } } },
+      lualine_z = {
+        { 'location', separator = { right = '' }, padding = { left = 0, right = 0 } },
       },
-      extensions = { 'neo-tree', 'fugitive', 'mason', 'quickfix', 'toggleterm', 'trouble' },
-    }
-  end,
+    },
+    -- extensions = { 'neo-tree', 'fugitive', 'mason', 'quickfix', 'toggleterm', 'trouble' },
+  },
 }

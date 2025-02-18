@@ -1,0 +1,25 @@
+macos-titlebar-style = hidden
+window-padding-x = 8
+window-padding-y = 9
+window-padding-balance = false
+# window-inherit-font-size = false
+# window-decoration = false
+window-width = 80
+window-height = 24
+theme = catppuccin-macchiato
+
+# font-family = BlexMono Nerd Font
+font-family = Geist Mono
+font-size = 13
+font-thicken = true
+adjust-cell-width = -1
+
+cursor-style = block
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+macos-option-as-alt = true
+background-opacity = 0.90
+background-blur-radius = 20
+
+adjust-cell-height = 5

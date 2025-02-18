@@ -29,14 +29,17 @@ vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<cr>', opts)
 vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<cr>', opts)
 
 -- Quit and Save
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit (buffer)' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', '<cmd>qa<cr><esc>', { desc = 'Quit' })
+-- vim.keymap.set({ 'n', 'i', 'v' }, '<C-d>', 'ZZ', { desc = 'Save and Quit (buffer)' })
+
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-q>', function()
+  Snacks.bufdelete.delete()
+end, { desc = 'Save and Quit (buffer)' })
 
 -- Select All
 vim.keymap.set('n', '<M-a>', 'ggVG', { desc = 'Select All' })
 
 -- File Explorer (toggle)
-vim.keymap.set('n', '<C-b>', '<cmd>Neotree toggle<cr>', opts)
+vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>', opts)
 
 -- Lazy & Mason
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })

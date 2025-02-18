@@ -1,15 +1,12 @@
+-- https://github.com/folke/which-key.nvim
 return {
-  {
-    'folke/which-key.nvim',
-    event = 'VimEnter',
-    keys = {
-      {
-        '<leader?>',
-        function()
-          require('which-key').show { global = false }
-        end,
-        desc = 'Buffer Local Keymaps (which-key)',
-      },
+  'folke/which-key.nvim',
+  event = 'VimEnter',
+  opts = {
+    delay = 0,
+    icons = {
+      mappings = true,
+      keys = {},
     },
   },
 }

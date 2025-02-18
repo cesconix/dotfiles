@@ -1,5 +1,4 @@
-local utils = require 'utils'
-
+-- https://github.com/stevearc/conform.nvim
 return {
   'stevearc/conform.nvim',
   lazy = false,
@@ -8,47 +7,26 @@ return {
 
     local formatters_by_ft = {
       lua = { 'stylua' },
-      markdown = { 'prettierd' },
-      css = { 'prettierd' },
-      html = { 'prettierd' },
-      yaml = { 'prettierd' },
-      graphql = { 'prettierd' },
-      json = { 'biome', 'prettierd' },
-      astro = { 'biome', 'biome-check', 'prettierd' },
-      javascript = { 'biome', 'biome-check', 'prettierd' },
-      typescript = { 'biome', 'biome-check', 'prettierd' },
-      javascriptreact = { 'biome', 'biome-check', 'prettierd' },
-      typescriptreact = { 'biome', 'biome-check', 'prettierd' },
-    }
-
-    local formatters = {
-      biome = {
-        condition = function()
-          return utils.file_exists {
-            'biome.json',
-          }
-        end,
-      },
-      prettierd = {
-        condition = function()
-          return utils.file_exists {
-            '.prettierrc',
-            '.prettierrc.js',
-            'prettier.config.cjs',
-          }
-        end,
-      },
+      markdown = { 'prettier' },
+      css = { 'prettier' },
+      html = { 'prettier' },
+      yaml = { 'prettier' },
+      graphql = { 'prettier' },
+      json = { 'prettier', stop_after_first = true },
+      astro = { 'prettier', stop_after_first = true },
+      javascript = { 'prettier', stop_after_first = true },
+      typescript = { 'prettier', stop_after_first = true },
+      javascriptreact = { 'prettier', stop_after_first = true },
+      typescriptreact = { 'prettier', stop_after_first = true },
     }
 
     conform.setup {
-      format_on_save = function()
-        return {
-          timeout_ms = 500,
-          lsp_fallback = true,
-        }
-      end,
+      format_on_save = {
+        timeout_ms = 500,
+        stop_after_first = true,
+        lsp_format = 'fallback',
+      },
       formatters_by_ft = formatters_by_ft,
-      formatters = formatters,
     }
 
     vim.keymap.set('n', '<leader>F', function()

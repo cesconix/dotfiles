@@ -1,3 +1,4 @@
+-- https://github.com/ThePrimeagen/harpoon
 return {
   'ThePrimeagen/harpoon',
   enabled = true,
