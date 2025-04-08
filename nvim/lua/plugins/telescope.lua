@@ -82,6 +82,15 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search: Recent Files' })
       vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search: Buffers' })
       vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Search: Git Status' })
+      vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Search: Git Commits' })
+      vim.keymap.set(
+        'n',
+        '<leader>gC',
+        builtin.git_bcommits,
+        { desc = 'Search: Git Commits (Buffer)' }
+      )
+      vim.keymap.set('n', '<leader>gS', builtin.git_stash, { desc = 'Search: Git Stash' })
+      vim.keymap.set('n', '<leader>gB', builtin.git_branches, { desc = 'Search: Git Branches' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>s/', function()

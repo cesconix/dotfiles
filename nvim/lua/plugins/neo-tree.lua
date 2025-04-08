@@ -8,13 +8,13 @@ return {
     'MunifTanjim/nui.nvim',
   },
   opts = {
-    default_component_configs = {
-      indent = {
-        highlight = 'IblIndent',
-      },
-    },
+    -- default_component_configs = {
+    --   indent = {
+    --     highlight = 'IblIndent',
+    --   },
+    -- },
     window = {
-      width = 30,
+      -- width = 30,
       mappings = {
         ['P'] = { 'toggle_preview', config = { use_float = false, use_image_nvim = true } },
         ['oc'] = 'noop',

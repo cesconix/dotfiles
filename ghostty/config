@@ -6,7 +6,8 @@ window-padding-balance = false
 # window-decoration = false
 window-width = 80
 window-height = 24
-theme = catppuccin-macchiato
+# theme = catppuccin-macchiato
+theme = tokyonight
 
 # font-family = BlexMono Nerd Font
 font-family = Geist Mono
