@@ -11,7 +11,7 @@ theme = tokyonight
 
 # font-family = BlexMono Nerd Font
 font-family = Geist Mono
-font-size = 13
+font-size = 12
 font-thicken = true
 adjust-cell-width = -1
 
