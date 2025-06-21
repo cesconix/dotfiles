@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.o.winborder = "rounded"
+vim.g.root_spec = { "cwd" }
