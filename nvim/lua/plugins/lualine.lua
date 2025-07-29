@@ -3,7 +3,7 @@ return {
   opts = {
     options = {
       theme = "tokyonight",
-      transparent = true,
+      -- transparent = true,
       component_separators = "",
       section_separators = { left = "", right = "" },
     },

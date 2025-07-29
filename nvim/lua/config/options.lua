@@ -4,3 +4,4 @@
 
 vim.o.winborder = "rounded"
 vim.g.root_spec = { "cwd" }
+vim.o.backupcopy = "yes"
